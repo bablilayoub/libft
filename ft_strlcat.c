@@ -6,7 +6,7 @@
 /*   By: abablil <abablil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:51:24 by abablil           #+#    #+#             */
-/*   Updated: 2023/11/15 10:05:39 by abablil          ###   ########.fr       */
+/*   Updated: 2023/11/15 10:47:49 by abablil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	if (dest == NULL && size == 0)
 		return (src_len);
-	while (dest[j] && dest[j] != '\0')
-		j++;
+	j = ft_strlen(dest);
 	dest_len = j;
 	if (size <= dest_len)
 		return (src_len + size);
