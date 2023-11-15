@@ -12,7 +12,7 @@ NAME = libft.a
 HEADER = libft.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-LIBC = ar rc
+LIBC = ar rcs
 RM = rm -f
 MANDA_OBJ = $(MANDA_SRCS:.c=.o)
 BONUS_OBJ = $(BONUS_SRCS:.c=.o)
