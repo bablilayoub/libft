@@ -6,7 +6,7 @@
 /*   By: abablil <abablil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:32:00 by abablil           #+#    #+#             */
-/*   Updated: 2023/11/15 10:02:09 by abablil          ###   ########.fr       */
+/*   Updated: 2023/11/15 21:45:46 by abablil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	count_digits(int n)
 	int	digits;
 
 	digits = (n == 0);
-	while (n != 0) 
+	while (n != 0)
 	{
 		n /= 10;
 		digits++;
@@ -29,7 +29,7 @@ char	*ft_itoa(int n)
 {
 	int		sign;
 	int		total_digits;
-	char	*result; 
+	char	*result;
 
 	sign = (n < 0);
 	total_digits = count_digits(n) + sign;
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 		result[--total_digits] = -(n % 10) + '0';
 		n = -(n / 10);
 	}
-	while (total_digits-- > sign) 
+	while (total_digits-- > sign)
 	{
 		result[total_digits] = n % 10 + '0';
 		n /= 10;
